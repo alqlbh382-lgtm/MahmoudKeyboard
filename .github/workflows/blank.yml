@@ -17,7 +17,7 @@ jobs:
           distribution: temurin
           java-version: '17'
 
-      - name: بناء التطبيق
+      - name: بناء تطبيق Android
         run: |
           chmod +x gradlew
           ./gradlew assembleDebug
@@ -25,5 +25,5 @@ jobs:
       - name: حفظ APK
         uses: actions/upload-artifact@v4
         with:
-          name: MahmoudKeyboard-APK
-          path: '**/build/outputs/apk/debug/*.apk'
+          name: Mahmoud-Keyboard-APK
+          path: '**/build/outputs/apk/**/*.apk'
